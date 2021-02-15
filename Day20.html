@@ -1,0 +1,258 @@
+
+<html>
+<head>
+<title>Passport Validation Form</title>
+<script src="formvalid.js"></script>
+<style>
+body
+{
+background-color:#e9d3ff;
+}
+table
+{
+text-align:right;
+border: 1px solid black;
+}
+
+#c2
+{
+text-align:left;
+}
+
+input[type=text]
+{
+background-color:white;
+}
+
+select
+{
+background-color:#FFFF33;
+}
+
+
+</style>
+</head>
+<body>
+<form name=registration onsubmit="return formvalidation()">
+<table>
+<tr>
+<td><center>Online Passport Registration at Indian Missions/Posts for NRI's.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<!/table>
+
+<!table>
+<tr>
+<td id=red>Note: Columns marked with * are compulsory to fill in.</td></tr>
+
+<tr>
+<td>Indian Mission</td>
+<td id=c2><select name=mission >
+ <option selected="selected">Default</option>
+<option> USA San Francisco</option>
+<option> USA Newyork</option>
+<option> UK London </option>
+<option> UK Paris</option></td>
+</tr>
+
+<tr>
+<td>Service Desired</td>
+<td id=c2><select name=service>
+ <option selected="selected">Default</option>
+<option> New Passport </option>
+<option> Passport Renewal </option>
+<option> VISA application </option>
+<option> Data Updation</option></td>
+</tr>
+
+<tr>
+<td>Surname</td>
+<td id=c2><input type=text name=surname></td>
+</tr>
+
+<tr><td>Given Name's
+</td>
+<td id=c2>
+<input type=text name=givenname>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<th colspan=2><pre style="color:red; font-family:Calibri;font-size:15px;">Names should be in full Initials and titles such as Mr., Mrs., Dr., etc are not allowed.</pre></th>
+</tr>
+
+<tr>
+<th colspan=2><pre style="color:red; font-family:Calibri;font-size:15px;">If you have ever changed your name click the box <input name="prevnamecheck" type=checkbox> and indicate previous Name(s) in full.</pre></th>
+</tr>
+</!table>
+
+<!table>
+
+<tr>
+<td>Previous Name</td>
+<td id=c2><input name=prevname type=text></td>
+</tr>
+
+
+
+<tr>
+<td>Sex</td>
+<td id=c2><select name=sex>
+<option selected="selected">Default</option>
+<option>Male</option>
+<option>Female</option>
+<option>Transgender</option></td>
+<td>Date of Birth</td>
+<td><input name=dob type=date></td> <td>MM/DD/YYYY</td>
+</tr>
+
+<tr>
+<td>Place of Birth</td>
+<td id=c2><input name=pob type=text></td>
+<td>District/Country</td>
+<td><input name=country type=text></td>
+</tr>
+
+<tr>
+<td>Qualification</td>
+<td id=c2 ><input name=qualification type=text></td>
+<td>Profession</td>
+<td><input name=profession type=text></td>
+</tr>
+
+<tr>
+<td>Visible Mark</td>
+<td id=c2 ><input name=height type=text></td>
+<td>Height(cms)</td>
+<td><input type=number min=50 max=1000></td>
+</tr>
+
+<tr>
+<td>Color of Eyes</td>
+<td id=c2 ><input name=eyes type=text></td>
+<td>Color of Hair</td>
+<td><input name=hair type=text></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Address to be printed in Passport</td>
+<td id=c2 ><input name=address type=text></td>
+<td>Other Address</td>
+<td><input name=otheraddress type=text></td>
+</tr>
+
+<tr>
+<td>Phone No</td>
+<td id=c2 ><input name=phone type=tel></td>
+<td>Mobile No</td>
+<td><input name=mobile type=tel></td>
+</tr>
+
+<tr>
+<td>Email Address</td>
+<td id=c2 ><input name=email type=email></td>
+</tr>
+</!table>
+
+<!table>
+<tr>
+<th colspan=2><pre style="color:red; font-family:Calibri;font-size:15px;">Applicant's Family Information (All Nams should be in full Initials and titles such as Mr., Mrs., Dr etc are not allowed).</pre></th>
+</tr>
+
+<tr>
+<td>Marital Status</td>
+<td id=c2 ><select name=maritalstatus>
+<option selected="selected">Default</option>
+<option> Married </option>
+<option> Unmarried </option>
+<option> Single </option>
+</select></td>
+</tr>
+
+<tr>
+<td>Spouse Name</td>
+<td id=c2  ><input name=spouse type=text></td>
+</tr>
+
+<tr>
+<td>Spouse's Nationality</td>
+<td id=c2><input name=spousenationality type=text></td>
+</tr>
+
+<tr>
+<td>Father's Name</td>
+<td id=c2 ><input name=father type=text></td>
+</tr>
+
+<tr>
+<td>Father's Birth Country</td>
+<td id=c2 ><input name=fbc type=text></td>
+</tr>
+
+<tr>
+<td rowspan=2>Nationality of Father at the time of applicant's birth</td>
+<td rowspan=2 id=c2><input name=nfbc type=text></td>
+</tr>
+
+<tr>
+<td>Mother's Name</td>
+<td><input name=mother type=text></td>
+</tr>
+
+<tr>
+<td>Mother's Birth Country</td>
+<td id=c2><input name=mbc type=text></td>
+</tr>
+
+<tr>
+<td>Nationality of Mother at the time of applicant's birth</td>
+<td id=c2><input name=nmbc type=text></td>
+</tr>
+
+
+<tr>
+<td></td>
+</tr>
+
+<tr>
+<th colspan=2><pre style="color:red; font-family:Calibri;font-size:15px;">
+If you have held a passport or hold a passport at present, click this box <input name=exisp type=checkbox> and fill the details below.</td>
+</pre></th>
+</tr>
+
+<tr>
+<td>Old Existing Passport No</td>
+<td id=c2><input name=exipno type=text></td>
+<td>Issue Date</td>
+<td><input name=idate type=date></td>
+</tr>
+
+<tr>
+<td>Place of Issue</td>
+<td id=c2><input name=pi type=text></td>
+<td>File Number</td>
+<td><input name=fileno type=text></td>
+</tr>
+
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><input type=submit ></td>
+<td><input type=reset></td>
+</tr>
+
+</table>
+</form>
+</body>
+<html>
